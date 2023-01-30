@@ -1,19 +1,5 @@
 <html>
   <head>
-    <script>
-      function submitForm() {
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
-        if (username === "admin" && password === "1234") {
-          window.location.href = "logedon.html";
-        } else {
-          document.getElementById("error").innerHTML = "Giriş Yapılamadı. Lütfen Tekrar Deneyin";
-          document.getElementById("error").style.color = "red";
-          document.getElementById("error").style.fontWeight = "bold";
-          document.getElementById("error").style.fontFamily = "Arial";
-        }
-      }
-    </script>
     <style>
       body {
         background-color: black;
@@ -21,40 +7,15 @@
         font-weight: bold;
         font-family: Arial;
       }
-      form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 50px;
-      }
-      input[type="text"], input[type="password"] {
-        padding: 10px;
-        margin: 10px 0;
-        width: 200px;
-        font-size: 16px;
-      }
-      input[type="submit"] {
-        padding: 10px 20px;
-        margin-top: 10px;
-        background-color: green;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      #error {
-        margin-top: 10px;
+      .error {
+        color: red;
+        font-weight: bold;
+        font-family: Arial;
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <form onsubmit="submitForm()">
-      <label for="username">Kullanıcı Adı:</label>
-      <input type="text" id="username" name="username">
-      <label for="password">Şifre:</label>
-      <input type="password" id="password" name="password">
-      <input type="submit" value="Giriş Yap">
-    </form>
-    <div id="error"></div>
+    <div class="error">Giriş yapılamadı</div>
   </body>
 </html>
